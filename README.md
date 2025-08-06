@@ -1,6 +1,6 @@
-# 🎓 CTP Carlos Pascua Zúñiga - Sitio Web Oficial
+# 🎓 CTP Ing. Carlos Pascua Zúñiga - Sitio Web Oficial
 
-Sitio web estático desarrollado con **Astro** para el Colegio Técnico Profesional Carlos Pascua Zúñiga, una institución pública ubicada en Heredia, Costa Rica. 
+Sitio web estático desarrollado con **Astro** para el Colegio Técnico Profesional Ing. Carlos Pascua Zúñiga, una institución pública ubicada en Heredia, Costa Rica. 
 
 ## 🎯 Objetivo
 
@@ -201,7 +201,7 @@ Para un análisis detallado del sitio web, incluyendo links no funcionales ident
 
 ## 📧 Contacto
 
-**Colegio Técnico Profesional Carlos Pascua Zúñiga**
+**Colegio Técnico Profesional Ing. Carlos Pascua Zúñiga**
 - 📍 C. 11, Heredia, San Rafael ([Ver mapa](https://maps.app.goo.gl/XUfi3envF2GWCaak7))
 - 📞 2237-2710
 - ✉️ lic.ingcarlospascua@mep.go.cr

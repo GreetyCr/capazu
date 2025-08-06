@@ -43,7 +43,7 @@ const BeneficiosSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            ¿Por qué elegir el <span className="text-blue-600">CTP Carlos Pascua Zúñiga</span>?
+            ¿Por qué elegir el <span className="text-blue-600">CTP Ing. Carlos Pascua Zúñiga</span>?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Descubrí las ventajas de estudiar en una institución que combina excelencia académica, 

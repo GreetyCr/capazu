@@ -1,4 +1,4 @@
-# 📊 Análisis del Sitio Web - CTP Carlos Pascua Zúñiga
+# 📊 Análisis del Sitio Web - CTP Ing. Carlos Pascua Zúñiga
 
 **Fecha del análisis:** Diciembre 2024  
 **Estado:** Post-eliminación de información de empleabilidad  
@@ -8,7 +8,7 @@
 
 ## 🎯 Resumen Ejecutivo
 
-Este documento contiene el análisis completo del sitio web del CTP Carlos Pascua Zúñiga después de la eliminación de información de empleabilidad e inserción laboral. Se identificaron links no funcionales y se proporcionan recomendaciones detalladas para mejorar el contenido y la funcionalidad del sitio.
+Este documento contiene el análisis completo del sitio web del CTP Ing. Carlos Pascua Zúñiga después de la eliminación de información de empleabilidad e inserción laboral. Se identificaron links no funcionales y se proporcionan recomendaciones detalladas para mejorar el contenido y la funcionalidad del sitio.
 
 ---
 
@@ -45,7 +45,7 @@ Este documento contiene el análisis completo del sitio web del CTP Carlos Pascu
 #### **Página "Sobre Nosotros" (`/sobre-nosotros`)**
 ```
 Contenido recomendado:
-- Historia y fundación del CTP Carlos Pascua Zúñiga
+- Historia y fundación del CTP Ing. Carlos Pascua Zúñiga
 - Cronología de hitos importantes
 - Misión, visión y valores institucionales
 - Reconocimientos y acreditaciones del MEP

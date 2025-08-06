@@ -28,7 +28,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-gray-600 mb-8 leading-relaxed"
             >
-              En el <strong>CTP Carlos Pascua Zúñiga</strong> combinamos educación académica de calidad 
+              En el <strong>CTP Ing. Carlos Pascua Zúñiga</strong> combinamos educación académica de calidad 
               con formación técnica especializada. Preparate para un futuro lleno de oportunidades 
               con educación <strong>100% gratuita</strong> y formación competitiva.
             </motion.p>
