@@ -1,0 +1,459 @@
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+
+// Perfil del egresado
+const perfilEgresado = [
+  {
+    descripcion: "Maneja servicios bancarios y productos financieros con excelencia.",
+    icono: "🏦"
+  },
+  {
+    descripcion: "Realiza análisis crediticio y evaluación de riesgos financieros.",
+    icono: "📈"
+  },
+  {
+    descripcion: "Aplica normativas bancarias y cumplimiento regulatorio.",
+    icono: "⚖️"
+  },
+  {
+    descripcion: "Está preparado para liderar en el sector financiero costarricense.",
+    icono: "🎯"
+  }
+];
+
+// Contenidos y herramientas
+const contenidosHerramientas = [
+  {
+    titulo: "Servicios bancarios y financieros",
+    descripcion: "Productos financieros, créditos, inversiones y seguros",
+    icono: "💳"
+  },
+  {
+    titulo: "Análisis crediticio y riesgos",
+    descripcion: "Evaluación financiera y gestión de riesgos crediticios",
+    icono: "📊"
+  },
+  {
+    titulo: "Normativa bancaria nacional",
+    descripcion: "Regulaciones SUGEF, compliance y marco legal financiero",
+    icono: "📜"
+  },
+  {
+    titulo: "Atención al cliente especializada",
+    descripcion: "Técnicas de servicio y asesoría financiera personalizada",
+    icono: "🤝"
+  },
+  {
+    titulo: "Sistemas bancarios digitales",
+    descripcion: "Plataformas tecnológicas y banca digital moderna",
+    icono: "💻"
+  }
+];
+---
+
+<LayoutBase 
+  title="Banca y Finanzas - CTP Carlos Pascua Zúñiga"
+  description="Especialidad técnica en Banca y Finanzas. Formación integral en servicios financieros, análisis crediticio y gestión bancaria según estándares del sector financiero costarricense."
+>
+  <!-- Hero de la especialidad -->
+  <section class="relative bg-gradient-to-br from-green-50 via-white to-gray-50 py-12 md:py-16 overflow-hidden" role="banner">
+    <!-- Elementos decorativos -->
+    <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div class="absolute -top-24 -right-24 w-48 h-48 bg-green-100 rounded-full opacity-20"></div>
+      <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-gray-100 rounded-full opacity-15"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-4xl mx-auto">
+        <!-- Breadcrumb mejorado -->
+        <nav class="mb-8" aria-label="Navegación de migas de pan">
+          <div class="flex justify-center">
+            <ol class="inline-flex items-center bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-md border border-gray-200">
+              <li class="flex items-center">
+                <a href="/" class="flex items-center text-gray-600 hover:text-green-600 transition-all duration-300 font-medium group">
+                  <svg class="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                  </svg>
+                  Inicio
+                </a>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-gray-400 mx-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <a href="/especialidades" class="text-gray-600 hover:text-green-600 transition-all duration-300 font-medium">
+                  Especialidades
+                </a>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-gray-400 mx-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-green-700 font-semibold bg-green-100 px-3 py-1 rounded-full text-sm">
+                  Banca y Finanzas
+                </span>
+              </li>
+            </ol>
+          </div>
+        </nav>
+
+        <!-- Badge de especialidad -->
+        <div class="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          💰 ESP-002 | Especialidad Técnica Acreditada
+        </div>
+
+        <!-- Título principal -->
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <span class="text-green-700">Banca y Finanzas</span>
+        </h1>
+        
+        <!-- Descripción introductoria -->
+        <p class="text-lg sm:text-xl text-gray-700 mb-8 leading-relaxed">
+          La especialidad de <strong class="text-gray-900">Banca y Finanzas</strong> prepara técnicos especializados en el sector financiero, 
+          con competencias sólidas en servicios bancarios, análisis crediticio y gestión de productos financieros. Esta formación brinda 
+          las bases para desarrollarte profesionalmente en uno de los sectores más estables del país.
+        </p>
+
+        <!-- Estadísticas clave -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto border border-gray-200">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-green-700 mb-1">100%</div>
+            <div class="text-gray-600 font-medium text-sm">Acreditación MEP</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-blue-600 mb-1">2,840</div>
+            <div class="text-gray-600 font-medium text-sm">Horas de formación</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-purple-600 mb-1">3</div>
+            <div class="text-gray-600 font-medium text-sm">Años de duración</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Perfil del estudiante egresado -->
+  <section class="py-16 md:py-20 bg-white relative" role="main">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle 
+        title="Perfil del técnico egresado"
+        highlight="técnico egresado"
+        subtitle="Competencias y habilidades que desarrollará el estudiante al finalizar la especialidad de Banca y Finanzas."
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        {perfilEgresado.map((item, index) => (
+          <div class="bg-green-50 rounded-xl p-6 border border-green-200 hover:shadow-md transition-all duration-300 group">
+            <div class="flex items-start space-x-4">
+              <div class="text-3xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300" 
+                   role="img" 
+                   aria-label={`Competencia ${index + 1}`}>
+                {item.icono}
+              </div>
+              <div class="flex-1">
+                <p class="text-gray-800 leading-relaxed font-medium">
+                  {item.descripcion}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Estructura curricular -->
+  <section class="py-16 md:py-20 bg-gray-50 relative" role="main">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle 
+        title="Estructura curricular"
+        highlight="Estructura curricular"
+        subtitle="Plan de estudios detallado por nivel educativo con distribución de horas semanales y anuales por subárea."
+      />
+
+      <!-- Tabla responsive -->
+      <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+        <!-- Header de la tabla -->
+        <div class="bg-green-700 text-white px-6 py-4">
+          <h3 class="text-xl font-bold text-center">Número de Horas por Subárea por Nivel</h3>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full" role="table">
+            <thead class="bg-gray-100">
+              <tr>
+                <th class="px-6 py-4 text-left text-sm font-bold text-gray-900 border-r border-gray-300" scope="col">Nombre de la Subárea</th>
+                <th class="px-4 py-4 text-center text-sm font-bold text-blue-800 bg-blue-100 border-r border-gray-300" colspan="2" scope="col">Décimo</th>
+                <th class="px-4 py-4 text-center text-sm font-bold text-yellow-800 bg-yellow-100 border-r border-gray-300" colspan="2" scope="col">Undécimo</th>
+                <th class="px-4 py-4 text-center text-sm font-bold text-green-800 bg-green-100" colspan="2" scope="col">Duodécimo</th>
+              </tr>
+              <tr class="bg-gray-50">
+                <th class="px-6 py-2 border-r border-gray-300"></th>
+                <th class="px-3 py-2 text-xs font-medium text-blue-700 border-r border-gray-200">Horas semanales</th>
+                <th class="px-3 py-2 text-xs font-medium text-blue-700 border-r border-gray-300">Horas anuales</th>
+                <th class="px-3 py-2 text-xs font-medium text-yellow-700 border-r border-gray-200">Horas semanales</th>
+                <th class="px-3 py-2 text-xs font-medium text-yellow-700 border-r border-gray-300">Horas anuales</th>
+                <th class="px-3 py-2 text-xs font-medium text-green-700 border-r border-gray-200">Horas semanales</th>
+                <th class="px-3 py-2 text-xs font-medium text-green-700">Horas anuales</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-gray-900 font-medium border-r border-gray-300">1. Contabilidad de gestión y administración financiera</td>
+                <td class="px-3 py-4 text-center text-blue-900 font-semibold bg-blue-50 border-r border-gray-200">12</td>
+                <td class="px-3 py-4 text-center text-blue-900 font-semibold bg-blue-50 border-r border-gray-300">480</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-200">—</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-300">—</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-200">—</td>
+                <td class="px-3 py-4 text-center text-gray-400">—</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-gray-900 font-medium border-r border-gray-300">2. Gestión en tecnologías digitales financieras</td>
+                <td class="px-3 py-4 text-center text-blue-900 font-semibold bg-blue-50 border-r border-gray-200">8</td>
+                <td class="px-3 py-4 text-center text-blue-900 font-semibold bg-blue-50 border-r border-gray-300">320</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-200">—</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-300">—</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-200">—</td>
+                <td class="px-3 py-4 text-center text-gray-400">—</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-gray-900 font-medium border-r border-gray-300">3. Gestión bancaria y de mercados financieros</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-200">—</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-300">—</td>
+                <td class="px-3 py-4 text-center text-yellow-900 font-semibold bg-yellow-50 border-r border-gray-200">12</td>
+                <td class="px-3 py-4 text-center text-yellow-900 font-semibold bg-yellow-50 border-r border-gray-300">480</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-200">—</td>
+                <td class="px-3 py-4 text-center text-gray-400">—</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-gray-900 font-medium border-r border-gray-300">4. Gestión de seguros</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-200">—</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-300">—</td>
+                <td class="px-3 py-4 text-center text-yellow-900 font-semibold bg-yellow-50 border-r border-gray-200">8</td>
+                <td class="px-3 py-4 text-center text-yellow-900 font-semibold bg-yellow-50 border-r border-gray-300">320</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-200">—</td>
+                <td class="px-3 py-4 text-center text-gray-400">—</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-gray-900 font-medium border-r border-gray-300">5. Gestión financiera y legislación</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-200">—</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-300">—</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-200">—</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-300">—</td>
+                <td class="px-3 py-4 text-center text-green-900 font-semibold bg-green-50 border-r border-gray-200">12</td>
+                <td class="px-3 py-4 text-center text-green-900 font-semibold bg-green-50">300</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-gray-900 font-medium border-r border-gray-300">6. Gestión de pensiones</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-200">—</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-300">—</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-200">—</td>
+                <td class="px-3 py-4 text-center text-gray-400 border-r border-gray-300">—</td>
+                <td class="px-3 py-4 text-center text-green-900 font-semibold bg-green-50 border-r border-gray-200">8</td>
+                <td class="px-3 py-4 text-center text-green-900 font-semibold bg-green-50">200</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-gray-900 font-medium border-r border-gray-300">7. English Oriented to Banking and Finance</td>
+                <td class="px-3 py-4 text-center text-blue-900 font-semibold bg-blue-50 border-r border-gray-200">4</td>
+                <td class="px-3 py-4 text-center text-blue-900 font-semibold bg-blue-50 border-r border-gray-300">160</td>
+                <td class="px-3 py-4 text-center text-yellow-900 font-semibold bg-yellow-50 border-r border-gray-200">4</td>
+                <td class="px-3 py-4 text-center text-yellow-900 font-semibold bg-yellow-50 border-r border-gray-300">160</td>
+                <td class="px-3 py-4 text-center text-green-900 font-semibold bg-green-50 border-r border-gray-200">4</td>
+                <td class="px-3 py-4 text-center text-green-900 font-semibold bg-green-50">100</td>
+              </tr>
+              <!-- Fila de totales -->
+              <tr class="bg-gray-200 font-bold text-gray-900">
+                <td class="px-6 py-4 text-lg border-r border-gray-300">Total</td>
+                <td class="px-3 py-4 text-center text-blue-900 bg-blue-100 border-r border-gray-200">24</td>
+                <td class="px-3 py-4 text-center text-blue-900 bg-blue-100 border-r border-gray-300">960</td>
+                <td class="px-3 py-4 text-center text-yellow-900 bg-yellow-100 border-r border-gray-200">24</td>
+                <td class="px-3 py-4 text-center text-yellow-900 bg-yellow-100 border-r border-gray-300">960</td>
+                <td class="px-3 py-4 text-center text-green-900 bg-green-100 border-r border-gray-200">24</td>
+                <td class="px-3 py-4 text-center text-green-900 bg-green-100">600</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Total acumulado -->
+        <div class="bg-green-700 text-white px-6 py-4 text-center">
+          <p class="text-lg font-bold">
+            📌 Total acumulado durante la especialidad: <span class="text-green-200">2,840 horas</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Contenidos y herramientas abordadas -->
+  <section class="py-16 md:py-20 bg-white relative" role="main">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle 
+        title="Contenidos y herramientas especializadas"
+        highlight="herramientas especializadas"
+        subtitle="Conocimientos técnicos y herramientas prácticas que dominarán los estudiantes durante su formación."
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {contenidosHerramientas.map((item, index) => (
+          <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 p-6 group">
+            <div class="text-center">
+              <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300" 
+                   role="img" 
+                   aria-label={item.titulo}>
+                {item.icono}
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-3 leading-tight">
+                {item.titulo}
+              </h3>
+              <p class="text-gray-700 leading-relaxed text-sm">
+                {item.descripcion}
+              </p>
+              <!-- Indicador visual -->
+              <div class="w-8 h-0.5 bg-green-600 mx-auto mt-4 rounded-full opacity-60 group-hover:opacity-100 group-hover:w-12 transition-all duration-300"></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Información de matrícula -->
+  <section class="py-16 md:py-20 bg-gradient-to-r from-green-700 to-green-800 text-white relative overflow-hidden" role="complementary">
+    <!-- Elementos decorativos -->
+    <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div class="absolute -top-16 -right-16 w-32 h-32 bg-white rounded-full opacity-10"></div>
+      <div class="absolute -bottom-16 -left-16 w-40 h-40 bg-white rounded-full opacity-10"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-5xl mx-auto">
+        <!-- Mensaje principal -->
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+          ¿Interesado en <span class="text-green-200">Banca y Finanzas</span>?
+        </h2>
+        <p class="text-lg md:text-xl text-green-100 mb-12 leading-relaxed">
+          Obtén más información sobre el proceso de matrícula, requisitos de ingreso 
+          y recursos disponibles para estudiantes de esta especialidad.
+        </p>
+
+        <!-- Información de matrícula estructurada -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <h3 class="text-xl font-bold text-white mb-6">Proceso de Matrícula</h3>
+            <div class="space-y-4 text-left">
+              <div class="flex items-center text-green-100">
+                <svg class="w-5 h-5 mr-3 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>Período: Diciembre 2024 - Febrero 2025</span>
+              </div>
+              <div class="flex items-center text-green-100">
+                <svg class="w-5 h-5 mr-3 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>Requisito: Noveno año aprobado</span>
+              </div>
+              <div class="flex items-center text-green-100">
+                <svg class="w-5 h-5 mr-3 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>Matrícula 100% gratuita</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <h3 class="text-xl font-bold text-white mb-6">Contacto Institucional</h3>
+            <div class="space-y-4 text-left">
+              <div class="flex items-start text-green-100">
+                <svg class="w-5 h-5 mr-3 mt-0.5 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                </svg>
+                <span>Secretaría académica para información de matrícula</span>
+              </div>
+              <div class="flex items-start text-green-100">
+                <svg class="w-5 h-5 mr-3 mt-0.5 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                </svg>
+                <span>Visitas al campus disponibles en horario lectivo</span>
+              </div>
+              <div class="flex items-start text-green-100">
+                <svg class="w-5 h-5 mr-3 mt-0.5 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                </svg>
+                <span>Información adicional en la página principal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <a 
+            href="/especialidades"
+            class="bg-white text-green-900 px-8 py-4 rounded-xl font-semibold text-base hover:bg-green-50 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-3"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0L3 11.414V13a1 1 0 01-2 0V9a1 1 0 011-1h4a1 1 0 110 2H4.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+            </svg>
+            <span>Ver Otras Especialidades</span>
+          </a>
+          <a 
+            href="/"
+            class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-base hover:bg-white hover:text-green-900 transition-all duration-300 flex items-center justify-center space-x-3"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+            </svg>
+            <span>Página Principal</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</LayoutBase>
+
+<style>
+  /* Animaciones suaves */
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-in-up {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  /* Estilos especiales para tabla responsive */
+  @media (max-width: 768px) {
+    table {
+      font-size: 0.875rem;
+    }
+    
+    th, td {
+      padding: 0.75rem 0.5rem;
+    }
+  }
+
+  /* Efectos hover para cards y breadcrumbs */
+  .group:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Hover especial para breadcrumbs */
+  nav a:hover {
+    transform: translateY(-1px);
+  }
+</style> 

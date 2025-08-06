@@ -1,0 +1,10 @@
+---
+globs: *.astro, *.tsx, *.js, *.ts
+alwaysApply: false
+---
+📘 CALIDAD & MANTENIBILIDAD:
+– DRY: evita duplicación, abstrae componentes y utilidades
+– KISS: código simple y legible, no sobreingeniería :contentReference[oaicite:3]{index=3}
+– SOLID: funciones con una sola responsabilidad, fácil testeo :contentReference[oaicite:4]{index=4}
+– Nombres autodescriptivos: variables, funciones y props claros y en camelCase/PascalCase :contentReference[oaicite:5]{index=5}
+– Clean Code: comentarios explicativos solo donde es necesario :contentReference[oaicite:6]{index=6}

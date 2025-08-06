@@ -1,0 +1,9 @@
+---
+globs: *.json, *.package.json, *.yml, *.lock, *.md
+alwaysApply: false
+---
+🛠 DEV‑OPS Y TESTING:
+– Usar ESLint y Husky pre-commit para evitar errores :contentReference[oaicite:15]{index=15}
+– Configuración ¿CI/CD? (tests) antes del deploy
+– Identificar y marcar deuda técnica con @todo o @optimise en comentarios :contentReference[oaicite:16]{index=16}
+– Refactorizar: primero escribir WET (copy), luego abstraer con DRY cuando se entienda el patrón :contentReference[oaicite:17]{index=17}

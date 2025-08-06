@@ -1,0 +1,76 @@
+---
+export interface Props {
+  nombre: string;
+  descripcion: string;
+  duracion: string;
+  modalidad: string;
+  empleabilidad: string;
+  icono: string;
+  colores: {
+    bg: string;
+    accent: string;
+  };
+  index: number;
+  id: string;
+}
+
+const { nombre, descripcion, duracion, modalidad, icono, colores, index, id } = Astro.props;
+
+// Función para generar la URL de la página de la especialidad
+const getEspecialidadUrl = (especialidadId: string) => {
+  return `/${especialidadId}`;
+};
+---
+
+<article 
+  class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group border border-slate-200"
+  role="listitem"
+>
+  <!-- Header simple y elegante -->
+  <div class={`${colores.bg} px-8 py-6 relative overflow-hidden`}>
+    <!-- Icono principal -->
+    <div class="flex items-center justify-center mb-4">
+      <div class="text-5xl group-hover:scale-110 transition-transform duration-300" 
+           role="img" 
+           aria-label={nombre}>
+        {icono}
+      </div>
+    </div>
+    
+    <!-- Título centrado -->
+    <h3 class="text-xl font-bold text-slate-900 text-center leading-tight">
+      {nombre}
+    </h3>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="p-8">
+    <!-- Descripción -->
+    <p class="text-slate-600 leading-relaxed text-base mb-8 text-center">
+      {descripcion}
+    </p>
+
+    <!-- Información técnica simplificada -->
+    <div class="grid grid-cols-2 gap-6 mb-8">
+      <div class="text-center">
+        <div class="w-2 h-2 bg-slate-400 rounded-full mx-auto mb-3"></div>
+        <div class="text-xs uppercase tracking-wider text-slate-500 font-medium mb-2">Duración</div>
+        <div class="text-sm font-semibold text-slate-900">{duracion}</div>
+      </div>
+      <div class="text-center">
+        <div class="w-2 h-2 bg-slate-400 rounded-full mx-auto mb-3"></div>
+        <div class="text-xs uppercase tracking-wider text-slate-500 font-medium mb-2">Modalidad</div>
+        <div class="text-sm font-semibold text-slate-900">{modalidad}</div>
+      </div>
+    </div>
+
+    <!-- Botón de acción elegante -->
+    <a 
+      href={getEspecialidadUrl(id)}
+      class="block w-full bg-slate-900 text-white py-4 rounded-xl font-semibold hover:bg-slate-800 transition-colors duration-300 shadow-md hover:shadow-lg text-center no-underline"
+      aria-label={`Ver información detallada sobre ${nombre}`}
+    >
+      Ver Especialidad
+    </a>
+  </div>
+</article> 

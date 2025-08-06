@@ -1,16 +1,255 @@
 ---
-
+import LayoutBase from '../layouts/LayoutBase.astro';
+import Hero from '../components/Hero.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import BeneficioCard from '../components/BeneficioCard.astro';
+import EspecialidadCard from '../components/EspecialidadCard.astro';
+import EstadisticasSection from '../components/EstadisticasSection.astro';
+import SeccionInstitucional from '../components/SeccionInstitucional.astro';
+import { beneficios } from '../data/beneficios';
+import { especialidades } from '../data/especialidades';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<LayoutBase 
+  title="CTP Carlos Pascua Zúñiga - Educación Técnica de Excelencia en Heredia"
+  description="Institución pública de educación técnica en Heredia. Especialidades acreditadas en Gestión de Calidad, Banca y Finanzas, Contabilidad y Control Interno, Desarrollo de Aplicaciones de Software, Construcción Civil y Dibujo y Modelado para Edificaciones. Educación gratuita de calidad."
+>
+  <!-- Hero Section -->
+  <Hero />
+
+  <!-- Sección: Ventajas de la Educación Técnica -->
+  <section id="beneficios" class="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-blue-50/20 relative" role="main">
+    <!-- Elementos decorativos sutiles -->
+    <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div class="absolute top-10 left-10 w-24 h-24 bg-blue-100 rounded-full opacity-20"></div>
+      <div class="absolute bottom-10 right-10 w-20 h-20 bg-gray-100 rounded-full opacity-20"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Header de sección con estadística -->
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          📊 Respaldado por resultados académicos comprobados
+        </div>
+        <SectionTitle 
+          title="Ventajas de la educación técnica profesional"
+          highlight="educación técnica"
+          subtitle="La formación técnica le brinda las competencias, conocimientos y oportunidades necesarias para desarrollar una carrera profesional sólida y proyección universitaria."
+        />
+      </div>
+
+      <!-- Grid de beneficios con layout formal -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" role="list">
+        {beneficios.map((beneficio, index) => (
+          <BeneficioCard 
+            titulo={beneficio.titulo}
+            descripcion={beneficio.descripcion}
+            icono={beneficio.icono}
+            colores={beneficio.colores}
+            index={index}
+          />
+        ))}
+      </div>
+
+      <!-- Panel informativo adicional -->
+      <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 md:p-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+          <!-- Estadísticas clave -->
+          <div class="text-center lg:text-left">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Excelencia educativa institucional
+            </h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-green-600 mb-1">100%</div>
+                <div class="text-xs text-gray-600">Gratuidad</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-purple-600 mb-1">15+</div>
+                <div class="text-xs text-gray-600">Años de experiencia</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Descripción complementaria -->
+          <div class="lg:col-span-2">
+            <p class="text-gray-700 leading-relaxed mb-4">
+              <strong class="text-gray-900">El CTP Carlos Pascua Zúñiga</strong> se posiciona como una institución líder en educación técnica, 
+              combinando rigor académico con aplicación práctica. Nuestros graduados se destacan 
+              como profesionales competentes y éticos en sus respectivas áreas.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Acreditación MEP</span>
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Prácticas empresariales</span>
+              <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Continuidad universitaria</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Estadísticas Destacadas -->
+  <EstadisticasSection />
+
+  <!-- Sección: Especialidades Técnicas -->
+  <section id="especialidades" class="py-20 md:py-24 bg-white relative" role="main">
+    <!-- Elementos decorativos sutiles -->
+    <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div class="absolute top-20 left-10 w-2 h-2 bg-slate-300 rounded-full opacity-60"></div>
+      <div class="absolute bottom-20 right-10 w-2 h-2 bg-slate-300 rounded-full opacity-60"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Header de sección -->
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center bg-slate-100 text-slate-700 px-6 py-2.5 rounded-lg font-medium mb-8 border border-slate-200">
+          <svg class="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          6 Especialidades Acreditadas MEP
+        </div>
+        <SectionTitle 
+          title="Especialidades Técnicas Profesionales"
+          highlight="Técnicas Profesionales"
+          subtitle="Programas educativos estructurados para formar técnicos especializados con competencias específicas demandadas por los sectores productivos del país."
+        />
+      </div>
+
+      <!-- Grid de especialidades rediseñado -->
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-20" role="list">
+        {especialidades.map((especialidad, index) => (
+          <EspecialidadCard 
+            nombre={especialidad.nombre}
+            descripcion={especialidad.descripcion}
+            duracion={especialidad.duracion}
+            modalidad={especialidad.modalidad}
+            empleabilidad={especialidad.empleabilidad}
+            icono={especialidad.icono}
+            colores={especialidad.colores}
+            index={index}
+            id={especialidad.id}
+          />
+        ))}
+      </div>
+
+      <!-- Panel informativo simplificado -->
+      <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-lg">
+        <!-- Header del panel -->
+        <div class="bg-gradient-to-r from-slate-800 to-slate-900 text-white px-8 py-6">
+          <h3 class="text-2xl font-bold text-center tracking-wide">Marco Académico Institucional</h3>
+        </div>
+        
+        <div class="p-12">
+          <!-- Contenido académico centrado -->
+          <div class="max-w-4xl mx-auto">
+            <h4 class="text-3xl font-bold text-slate-900 mb-12 text-center leading-tight">
+              Características distintivas de nuestros programas
+            </h4>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="text-center">
+                <div class="bg-blue-100 rounded-2xl p-6 mb-6 mx-auto w-20 h-20 flex items-center justify-center">
+                  <svg class="w-8 h-8 text-blue-700" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <h5 class="font-bold text-slate-900 text-xl mb-4">Prácticas Profesionales</h5>
+                <p class="text-slate-600 leading-relaxed">
+                  Mínimo 400 horas de práctica en empresas del sector, fortaleciendo la formación práctica.
+                </p>
+              </div>
+              
+              <div class="text-center">
+                <div class="bg-emerald-100 rounded-2xl p-6 mb-6 mx-auto w-20 h-20 flex items-center justify-center">
+                  <svg class="w-8 h-8 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                  </svg>
+                </div>
+                <h5 class="font-bold text-slate-900 text-xl mb-4">Articulación Universitaria</h5>
+                <p class="text-slate-600 leading-relaxed">
+                  Convenios vigentes con universidades para la continuación de estudios superiores.
+                </p>
+              </div>
+              
+              <div class="text-center">
+                <div class="bg-slate-100 rounded-2xl p-6 mb-6 mx-auto w-20 h-20 flex items-center justify-center">
+                  <svg class="w-8 h-8 text-slate-700" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <h5 class="font-bold text-slate-900 text-xl mb-4">Certificaciones Oficiales</h5>
+                <p class="text-slate-600 leading-relaxed">
+                  Títulos de Técnico Medio reconocidos por el sector empresarial del país.
+                </p>
+              </div>
+            </div>
+
+            <!-- Call to action centrado -->
+            <div class="text-center mt-12">
+              <a 
+                href="/especialidades"
+                class="inline-flex items-center bg-slate-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-800 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Ver Catálogo Completo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Institucional -->
+  <SeccionInstitucional />
+</LayoutBase>
+
+<style>
+  /* Animaciones suaves y optimizadas para rendimiento */
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-in-up {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  /* Efecto hover para las cards */
+  article:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Animaciones especiales para estadísticas */
+  @keyframes countUp {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .stat-number {
+    animation: countUp 0.8s ease-out forwards;
+  }
+
+  /* Efectos de scroll suaves */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Mejoras en accesibilidad */
+  button:focus,
+  a:focus {
+    outline: 2px solid rgba(59, 130, 246, 0.5);
+    outline-offset: 2px;
+  }
+</style>

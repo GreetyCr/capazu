@@ -1,0 +1,9 @@
+---
+globs: *.astro, *.tsx, *.mdx, *.html, *.txt
+alwaysApply: false
+---
+♿ ACCESIBILIDAD & SEO:
+– HTML semántico: usar <header>, <main>, <section>, <footer>, <nav>, <button>, <img alt="">
+– ARIA roles y labels en elementos interactivos :contentReference[oaicite:8]{index=8}
+– Contraste de texto contra fondo cumple AA/AAA
+– Evitar elementos clickables sin roles

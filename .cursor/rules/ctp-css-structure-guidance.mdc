@@ -1,0 +1,10 @@
+---
+globs: *.css, *.css, *.scss, *.tailwind.css
+alwaysApply: false
+---
+🎨 ESTRUCTURA Y ESTILO:
+– Tailwind first, sin estilo inline
+– Prefijos para BEM si usas CSS modular (ej. card__header--active) :contentReference[oaicite:10]{index=10}
+– Variables para repetir valores (colores, tamaños) :contentReference[oaicite:11]{index=11}
+– Unidades: rem/em, no px mágicos :contentReference[oaicite:12]{index=12}
+– Organizá el CSS en líneas separadas y limpias :contentReference[oaicite:13]{index=13}

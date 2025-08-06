@@ -1,0 +1,56 @@
+---
+export interface Props {
+  titulo: string;
+  descripcion: string;
+  icono: string;
+  colores: {
+    bg: string;
+    icon: string;
+  };
+  index: number;
+}
+
+const { titulo, descripcion, icono, colores, index } = Astro.props;
+---
+
+<article 
+  class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 group cursor-pointer border border-gray-200 overflow-hidden"
+  role="listitem"
+>
+  <!-- Header con ícono y número -->
+  <div class={`${colores.bg} px-6 py-4 border-b border-gray-100 relative`}>
+    <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-4">
+        <!-- Número de beneficio -->
+        <div class="bg-white rounded-full w-8 h-8 flex items-center justify-center">
+          <span class={`text-sm font-bold ${colores.icon}`}>
+            {String(index + 1).padStart(2, '0')}
+          </span>
+        </div>
+        <!-- Ícono principal -->
+        <div class={`text-3xl ${colores.icon} group-hover:scale-110 transition-transform duration-300`} 
+             role="img" 
+             aria-label={titulo}>
+          {icono}
+        </div>
+      </div>
+      <!-- Indicador visual -->
+      <div class={`w-2 h-12 ${colores.icon.replace('text-', 'bg-')} rounded-full opacity-30 group-hover:opacity-60 transition-opacity duration-300`}></div>
+    </div>
+  </div>
+  
+  <!-- Contenido principal -->
+  <div class="p-6">
+    <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-gray-800 transition-colors">
+      {titulo}
+    </h3>
+    <p class="text-gray-700 leading-relaxed text-base group-hover:text-gray-800 transition-colors">
+      {descripcion}
+    </p>
+    
+    <!-- Footer con línea decorativa -->
+    <div class="mt-4 pt-4 border-t border-gray-100">
+      <div class={`h-1 ${colores.icon.replace('text-', 'bg-')} rounded-full w-12 group-hover:w-16 transition-all duration-300`}></div>
+    </div>
+  </div>
+</article> 

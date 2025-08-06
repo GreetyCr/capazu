@@ -1,0 +1,15 @@
+---
+globs: *.tsx, *.astro, *.js, *.ts, *.css, *.jsx, *.json, *.mdx, *.txt
+alwaysApply: false
+---
+📦 PROYECTO CTP:
+– Stack: Astro + React + Tailwind + Framer Motion
+– Estructura de carpetas clara; components en PascalCase, archivos en kebab-case
+– Clases Tailwind; no CSS personalizado (evitar estilo inline)
+– Diseño mobile-first, accesibilidad, colores institucionales (blanco, azul, rojo, amarillo)
+– Imágenes en WebP/SVG, botones redondeados, buen contraste de texto
+– Navegación semántica y ARIA
+– Layout limpio: Header, Main, Footer
+– Documentar componentes, props y lógica no obvia
+– Usar Conventional Commits
+– Código estático, sin llamadas externas

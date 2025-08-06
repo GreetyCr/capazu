@@ -1,0 +1,479 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Colegio Técnico Profesional Carlos Pascua Zúñiga - Formación académica y técnica de calidad en San Rafael de Heredia, Costa Rica" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content={description} />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title}</title>
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col font-sans antialiased">
+      <!-- Header Principal Rediseñado -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-lg border-b border-gray-200/60 shadow-lg" style="z-index: 1000;">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Navegación principal">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo/Marca Mejorado -->
+        <div class="flex items-center">
+          <div class="flex-shrink-0 group">
+            <a href="/" class="flex items-center space-x-3">
+              <!-- Icono institucional -->
+              <div class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-2.5 group-hover:scale-105 transition-transform duration-300 shadow-lg">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                </svg>
+              </div>
+              <!-- Texto del logo -->
+              <div class="hidden sm:block">
+                <h1 class="text-xl lg:text-2xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors leading-tight">
+                  <span class="block">CTP Carlos</span>
+                  <span class="block text-base lg:text-lg text-gray-600 font-semibold">Pascua Zúñiga</span>
+                </h1>
+              </div>
+              <!-- Versión móvil del logo -->
+              <div class="sm:hidden">
+                <h1 class="text-lg font-bold text-gray-900 group-hover:text-blue-700 transition-colors">
+                  CTP
+                </h1>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Navigation Desktop Rediseñada -->
+        <div class="hidden lg:block">
+          <div class="flex items-center space-x-1">
+            <a href="/" 
+               class="nav-link text-gray-700 hover:text-blue-700 px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-blue-50 relative group"
+               aria-label="Ir a página de inicio">
+              <span>Inicio</span>
+              <div class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+            </a>
+            <a href="/especialidades" 
+               class="nav-link text-gray-700 hover:text-blue-700 px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-blue-50 relative group"
+               aria-label="Ver especialidades técnicas disponibles">
+              <span>Especialidades</span>
+              <div class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+            </a>
+            <a href="/#beneficios" 
+               class="nav-link text-gray-700 hover:text-blue-700 px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-blue-50 relative group"
+               aria-label="Conocer beneficios educativos">
+              <span>Beneficios</span>
+              <div class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+            </a>
+            <div class="w-px h-6 bg-gray-300 mx-2"></div>
+            <a href="#contacto" 
+               class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center space-x-2"
+               aria-label="Información de contacto institucional">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              <span>Contacto</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile & Tablet Menu Button -->
+        <div class="lg:hidden">
+          <button type="button" 
+                  id="mobile-menu-button"
+                  class="mobile-menu-button bg-gray-50 hover:bg-blue-50 inline-flex items-center justify-center p-3 rounded-xl text-gray-600 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300 shadow-sm" 
+                  aria-controls="mobile-menu" 
+                  aria-expanded="false"
+                  aria-label="Abrir menú de navegación">
+            <!-- Hamburger Icon -->
+            <svg class="menu-icon-open h-6 w-6 block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!-- Close Icon -->
+            <svg class="menu-icon-close h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="lg:hidden" id="mobile-menu">
+        <!-- Overlay sutil -->
+        <div class="mobile-menu-overlay fixed inset-0 bg-slate-900 bg-opacity-20 backdrop-blur-sm" style="z-index: 9998; display: none;"></div>
+        <!-- Panel Deslizante -->
+        <div class="mobile-menu-panel bg-white shadow-2xl overflow-y-auto border-l border-gray-200" style="position: fixed; top: 0; right: 0; height: 100vh; width: 320px; z-index: 9999; transform: translateX(100%); transition: transform 0.3s ease-in-out; display: none;">
+          <!-- Header del menú móvil -->
+          <div class="flex items-center justify-between p-6 border-b border-gray-200">
+            <div class="flex items-center space-x-3">
+              <div class="bg-gradient-to-br from-slate-700 to-slate-800 rounded-lg p-2.5 shadow-md">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-lg font-bold text-slate-800">CTP Carlos</h2>
+                <p class="text-sm text-slate-600">Pascua Zúñiga</p>
+              </div>
+            </div>
+            <button type="button" 
+                    class="mobile-menu-close p-2 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors"
+                    aria-label="Cerrar menú">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Navigation Links Móvil -->
+          <div class="px-6 py-4 space-y-2">
+                      <a href="/" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-xl text-slate-700 hover:text-slate-900 hover:bg-slate-50 transition-all duration-300 group"
+             aria-label="Ir a página de inicio">
+            <svg class="w-5 h-5 text-slate-400 group-hover:text-slate-700" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+            </svg>
+            <span class="font-semibold">Inicio</span>
+          </a>
+                      <a href="/especialidades" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-xl text-slate-700 hover:text-slate-900 hover:bg-slate-50 transition-all duration-300 group"
+             aria-label="Ver especialidades técnicas">
+            <svg class="w-5 h-5 text-slate-400 group-hover:text-slate-700" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z"/>
+            </svg>
+            <span class="font-semibold">Especialidades</span>
+          </a>
+                      <a href="/#beneficios" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-xl text-slate-700 hover:text-slate-900 hover:bg-slate-50 transition-all duration-300 group"
+             aria-label="Conocer beneficios">
+            <svg class="w-5 h-5 text-slate-400 group-hover:text-slate-700" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+            </svg>
+            <span class="font-semibold">Beneficios</span>
+          </a>
+          </div>
+
+                  <!-- Sección de contacto en menú móvil -->
+        <div class="px-6 py-4 border-t border-gray-200 mt-4">
+          <h3 class="text-sm font-semibold text-slate-800 uppercase tracking-wide mb-3">Contacto</h3>
+          <div class="space-y-3">
+            <a href="tel:22372710" 
+               class="flex items-center space-x-3 text-slate-600 hover:text-slate-800 transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+              </svg>
+              <span class="text-sm font-medium">2237-2710</span>
+            </a>
+            <a href="mailto:lic.ingcarlospascua@mep.go.cr" 
+               class="flex items-center space-x-3 text-slate-600 hover:text-slate-800 transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              <span class="text-sm font-medium">Email institucional</span>
+            </a>
+            <a href="https://maps.app.goo.gl/XUfi3envF2GWCaak7" 
+               target="_blank"
+               rel="noopener noreferrer"
+               class="flex items-center space-x-3 text-slate-600 hover:text-slate-800 transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-sm font-medium">San Rafael, Heredia</span>
+            </a>
+          </div>
+        </div>
+
+                  <!-- Footer del menú móvil -->
+        <div class="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200 bg-slate-50">
+          <p class="text-xs text-slate-500 text-center">
+            Educación técnica de excelencia<br>
+            <span class="font-semibold text-slate-700">Gratuita y de calidad</span>
+          </p>
+        </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1">
+    <slot />
+  </main>
+
+  <!-- Footer Moderno -->
+  <footer class="bg-gray-900 text-white relative overflow-hidden">
+    <!-- Elementos decorativos -->
+    <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div class="absolute -top-24 -right-24 w-48 h-48 bg-blue-600 rounded-full opacity-10"></div>
+      <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-red-600 rounded-full opacity-10"></div>
+    </div>
+
+    <div class="container mx-auto py-16 px-4 sm:px-8 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- Información del colegio -->
+        <div>
+          <h3 class="text-2xl font-bold mb-6 text-white">CTP Carlos Pascua Zúñiga</h3>
+          <p class="text-gray-300 text-lg leading-relaxed font-light mb-6">
+            Formación técnica y académica de excelencia. Preparamos a nuestros estudiantes para el éxito profesional con valores, excelencia y acceso gratuito a la educación.
+          </p>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/paginawebcapazu/" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="text-gray-400 hover:text-blue-400 transition-colors" 
+               aria-label="Seguir en Facebook">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="Instagram">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.611-3.185-1.559-.737-.948-1.054-2.184-.899-3.499.155-1.315.738-2.53 1.649-3.441.912-.911 2.127-1.494 3.441-1.649 1.315-.155 2.551.162 3.499.899.948.737 1.559 1.888 1.559 3.185 0 2.209-1.791 4-4 4z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contacto -->
+        <div>
+          <h3 class="text-xl font-bold mb-6">Información de Contacto</h3>
+          <div class="text-gray-300 space-y-4">
+            <div class="flex items-center">
+              <svg class="w-5 h-5 mr-3 text-blue-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              <a href="https://maps.app.goo.gl/XUfi3envF2GWCaak7" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 class="text-gray-300 hover:text-white transition-colors duration-300"
+                 aria-label="Ver ubicación en Google Maps">
+                C. 11, Heredia, San Rafael
+              </a>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 mr-3 text-blue-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+              </svg>
+              <a href="tel:22372710" 
+                 class="text-gray-300 hover:text-white transition-colors duration-300"
+                 aria-label="Llamar al CTP Carlos Pascua Zúñiga">
+                2237-2710
+              </a>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 mr-3 text-blue-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+              </svg>
+              <a href="mailto:lic.ingcarlospascua@mep.go.cr" 
+                 class="text-gray-300 hover:text-white transition-colors duration-300"
+                 aria-label="Enviar correo electrónico al CTP Carlos Pascua Zúñiga">
+                lic.ingcarlospascua@mep.go.cr
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Información Institucional -->
+        <div>
+          <h3 class="text-xl font-bold mb-6">Información Institucional</h3>
+          <div class="text-gray-300 space-y-4">
+            <div>
+              <h4 class="text-white font-semibold mb-2">🎓 Especialidades Disponibles</h4>
+              <p class="text-sm font-light leading-relaxed">
+                6 especialidades técnicas acreditadas por el MEP: Gestión de Calidad, Banca y Finanzas, Contabilidad y Control Interno, Desarrollo de Aplicaciones de Software, Construcción Civil y Dibujo y Modelado para Edificaciones.
+              </p>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-2">📚 Educación Gratuita</h4>
+              <p class="text-sm font-light leading-relaxed">
+                Formación técnica pública de excelencia, completamente gratuita, con programas de 1 a 3 años según la especialidad elegida.
+              </p>
+            </div>
+            <div class="mt-4">
+              <a href="/especialidades" 
+                 class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors font-medium text-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Ver todas las especialidades
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright mejorado -->
+      <div class="mt-12 pt-8 border-t border-gray-700">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm font-light">
+            © 2024 Colegio Técnico Profesional Carlos Pascua Zúñiga. Todos los derechos reservados.
+          </p>
+          <p class="text-gray-500 text-sm font-light mt-2 md:mt-0">
+            Educación técnica pública de excelencia 🇨🇷
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+<style>
+  @import '../styles/global.css';
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Font loading optimization */
+  body {
+    font-feature-settings: "kern" 1, "liga" 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Estilos específicos para el menú móvil - usando inline styles ahora */
+</style>
+
+<script>
+  // Mobile Menu Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay') as HTMLElement;
+    const mobileMenuPanel = document.querySelector('.mobile-menu-panel') as HTMLElement;
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const menuIconOpen = document.querySelector('.menu-icon-open');
+    const menuIconClose = document.querySelector('.menu-icon-close');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    
+    // Verificar que los elementos existen
+    if (!mobileMenuButton || !mobileMenu || !mobileMenuOverlay || !mobileMenuPanel || 
+        !mobileMenuClose || !menuIconOpen || !menuIconClose) {
+      console.log('Elementos del menú móvil no encontrados');
+      return;
+    }
+    
+    console.log('Menú móvil inicializado correctamente');
+    
+    let isMenuOpen = false;
+
+    // Función para abrir el menú
+    function openMenu() {
+      if (!mobileMenu || !mobileMenuOverlay || !mobileMenuPanel || !mobileMenuButton || 
+          !menuIconOpen || !menuIconClose) return;
+          
+      console.log('Abriendo menú móvil...');
+      isMenuOpen = true;
+      
+      // Mostrar overlay y panel
+      mobileMenuOverlay.style.display = 'block';
+      mobileMenuPanel.style.display = 'block';
+      
+      // Forzar reflow y luego animar
+      requestAnimationFrame(() => {
+        if (mobileMenuPanel && mobileMenuButton && menuIconOpen && menuIconClose) {
+          console.log('Animando panel...');
+          mobileMenuPanel.style.transform = 'translateX(0)';
+          document.body.style.overflow = 'hidden';
+          mobileMenuButton.setAttribute('aria-expanded', 'true');
+          
+          // Cambiar iconos
+          menuIconOpen.classList.add('hidden');
+          menuIconClose.classList.remove('hidden');
+          console.log('Menú abierto completamente');
+        }
+      });
+    }
+
+    // Función para cerrar el menú
+    function closeMenu() {
+      if (!mobileMenu || !mobileMenuOverlay || !mobileMenuPanel || !mobileMenuButton || 
+          !menuIconOpen || !menuIconClose) return;
+          
+      console.log('Cerrando menú móvil...');
+      isMenuOpen = false;
+      mobileMenuPanel.style.transform = 'translateX(100%)';
+      document.body.style.overflow = '';
+      mobileMenuButton.setAttribute('aria-expanded', 'false');
+      
+      // Ocultar completamente después de la animación
+      setTimeout(() => {
+        if (mobileMenuPanel && mobileMenuOverlay) {
+          mobileMenuPanel.style.display = 'none';
+          mobileMenuOverlay.style.display = 'none';
+        }
+      }, 300);
+      
+      // Cambiar iconos
+      menuIconOpen.classList.remove('hidden');
+      menuIconClose.classList.add('hidden');
+    }
+
+    // Event listeners
+    mobileMenuButton.addEventListener('click', function() {
+      if (isMenuOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    // Cerrar menú al hacer clic en overlay
+    mobileMenuOverlay.addEventListener('click', closeMenu);
+
+    // Cerrar menú con botón de cerrar
+    mobileMenuClose.addEventListener('click', closeMenu);
+
+    // Cerrar menú al hacer clic en enlaces
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Cerrar menú con tecla Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && isMenuOpen) {
+        closeMenu();
+      }
+    });
+
+    // Cerrar menú al cambiar tamaño de ventana a desktop
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 1024 && isMenuOpen) {
+        closeMenu();
+      }
+    });
+
+    // Mejorar accesibilidad: focus trapping
+    document.addEventListener('keydown', function(e) {
+      if (!isMenuOpen || !mobileMenuPanel) return;
+      
+      if (e.key === 'Tab') {
+        const focusableElements = mobileMenuPanel.querySelectorAll(
+          'button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const firstElement = focusableElements[0] as HTMLElement;
+        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+        
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement && firstElement) {
+            lastElement?.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastElement && lastElement) {
+            firstElement?.focus();
+            e.preventDefault();
+          }
+        }
+      }
+    });
+  });
+</script> 

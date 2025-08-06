@@ -1,0 +1,427 @@
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+
+// Perfil del egresado
+const perfilEgresado = [
+  {
+    descripcion: "Domina software CAD y herramientas de modelado 3D profesionales.",
+    icono: "💻"
+  },
+  {
+    descripcion: "Crea planos arquitectónicos técnicos precisos y detallados.",
+    icono: "📐"
+  },
+  {
+    descripcion: "Desarrolla modelos tridimensionales para proyectos de edificación.",
+    icono: "🏗️"
+  },
+  {
+    descripcion: "Está preparado para el sector de arquitectura y construcción.",
+    icono: "🏢"
+  }
+];
+
+// Contenidos y herramientas
+const contenidosHerramientas = [
+  {
+    titulo: "Software CAD profesional",
+    descripcion: "AutoCAD, Revit, SketchUp y ArchiCAD para diseño arquitectónico",
+    icono: "🖥️"
+  },
+  {
+    titulo: "Modelado 3D arquitectónico",
+    descripcion: "Creación de modelos tridimensionales y renderizado realista",
+    icono: "🧊"
+  },
+  {
+    titulo: "Dibujo técnico especializado",
+    descripcion: "Planos de construcción, detalles y especificaciones técnicas",
+    icono: "📋"
+  },
+  {
+    titulo: "Diseño urbanístico",
+    descripcion: "Planificación urbana y diseño de espacios públicos",
+    icono: "🏙️"
+  },
+  {
+    titulo: "Presentación de proyectos",
+    descripcion: "Técnicas de presentación y comunicación visual",
+    icono: "🎨"
+  },
+  {
+    titulo: "Normativas de construcción",
+    descripcion: "Códigos y regulaciones para edificaciones en Costa Rica",
+    icono: "📜"
+  }
+];
+---
+
+<LayoutBase 
+  title="Dibujo y Modelado para Edificaciones - CTP Carlos Pascua Zúñiga"
+  description="Especialidad técnica en Dibujo y Modelado para Edificaciones. Formación integral en diseño arquitectónico, modelado 3D y tecnologías CAD para el sector de construcción."
+>
+  <!-- Hero de la especialidad -->
+  <section class="relative bg-gradient-to-br from-teal-50 via-white to-gray-50 py-12 md:py-16 overflow-hidden" role="banner">
+    <!-- Elementos decorativos -->
+    <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div class="absolute -top-24 -right-24 w-48 h-48 bg-teal-100 rounded-full opacity-20"></div>
+      <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-gray-100 rounded-full opacity-15"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-4xl mx-auto">
+        <!-- Breadcrumb mejorado -->
+        <nav class="mb-8" aria-label="Navegación de migas de pan">
+          <div class="flex justify-center">
+            <ol class="inline-flex items-center bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-md border border-gray-200">
+              <li class="flex items-center">
+                <a href="/" class="flex items-center text-gray-600 hover:text-teal-600 transition-all duration-300 font-medium group">
+                  <svg class="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                  </svg>
+                  Inicio
+                </a>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-gray-400 mx-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <a href="/especialidades" class="text-gray-600 hover:text-teal-600 transition-all duration-300 font-medium">
+                  Especialidades
+                </a>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 text-gray-400 mx-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-teal-700 font-semibold bg-teal-100 px-3 py-1 rounded-full text-sm">
+                  Dibujo y Modelado para Edificaciones
+                </span>
+              </li>
+            </ol>
+          </div>
+        </nav>
+
+        <!-- Badge de especialidad -->
+        <div class="inline-flex items-center bg-teal-100 text-teal-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          📐 ESP-006 | Especialidad Técnica Acreditada
+        </div>
+
+        <!-- Título principal -->
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <span class="text-teal-700">Dibujo y Modelado para Edificaciones</span>
+        </h1>
+        
+        <!-- Descripción introductoria -->
+        <p class="text-lg sm:text-xl text-gray-700 mb-8 leading-relaxed">
+          La especialidad de <strong class="text-gray-900">Dibujo y Modelado para Edificaciones</strong> forma técnicos especializados 
+          en diseño arquitectónico, modelado 3D y dibujo técnico. Esta formación combina herramientas CAD modernas con fundamentos 
+          de arquitectura y construcción para preparar profesionales en el sector edificativo.
+        </p>
+
+        <!-- Estadísticas clave -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto border border-gray-200">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-teal-700 mb-1">100%</div>
+            <div class="text-gray-600 font-medium text-sm">Acreditación MEP</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-blue-600 mb-1">2,840</div>
+            <div class="text-gray-600 font-medium text-sm">Horas totales</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-purple-600 mb-1">3</div>
+            <div class="text-gray-600 font-medium text-sm">Años de duración</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Perfil del egresado -->
+  <section class="py-16 md:py-20 bg-gray-50 relative" role="main">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle 
+        title="Perfil del técnico egresado"
+        highlight="técnico egresado"
+        subtitle="Competencias y habilidades que desarrollará el estudiante al finalizar la especialidad de Dibujo y Modelado para Edificaciones."
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {perfilEgresado.map((item, index) => (
+          <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 p-6 group">
+            <div class="flex items-start space-x-4">
+              <div class="text-3xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300" 
+                   role="img" 
+                   aria-label={`Competencia ${index + 1}`}>
+                {item.icono}
+              </div>
+              <div class="flex-1">
+                <p class="text-gray-800 leading-relaxed font-medium">
+                  {item.descripcion}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Contenidos y herramientas abordadas -->
+  <section class="py-16 md:py-20 bg-white relative" role="main">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle 
+        title="Contenidos y herramientas especializadas"
+        highlight="herramientas especializadas"
+        subtitle="Conocimientos técnicos y herramientas prácticas que dominarán los estudiantes durante su formación."
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {contenidosHerramientas.map((item, index) => (
+          <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 p-6 group">
+            <div class="text-center">
+              <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300" 
+                   role="img" 
+                   aria-label={item.titulo}>
+                {item.icono}
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-3 leading-tight">
+                {item.titulo}
+              </h3>
+              <p class="text-gray-700 leading-relaxed text-sm">
+                {item.descripcion}
+              </p>
+              <!-- Indicador visual -->
+              <div class="w-8 h-0.5 bg-teal-600 mx-auto mt-4 rounded-full opacity-60 group-hover:opacity-100 group-hover:w-12 transition-all duration-300"></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Currículum académico -->
+  <section class="py-16 md:py-20 bg-gray-50 relative" role="main">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionTitle 
+        title="Currículum académico"
+        highlight="Currículum académico"
+        subtitle="Plan de estudios detallado por nivel educativo con distribución de horas semanales y anuales."
+      />
+
+      <!-- Tabla responsive -->
+      <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+        <!-- Header de la tabla -->
+        <div class="bg-teal-700 text-white px-6 py-4">
+          <h3 class="text-xl font-bold text-center">Plan de Estudios por Nivel</h3>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full" role="table">
+            <thead class="bg-gray-100">
+              <tr>
+                <th class="px-6 py-4 text-left text-sm font-bold text-gray-900" scope="col">Subárea</th>
+                <th class="px-4 py-4 text-center text-sm font-bold text-gray-900" scope="col">Décimo<br><span class="text-xs font-normal">Hrs. sem.</span></th>
+                <th class="px-4 py-4 text-center text-sm font-bold text-gray-900" scope="col">Décimo<br><span class="text-xs font-normal">Hrs. anuales</span></th>
+                <th class="px-4 py-4 text-center text-sm font-bold text-gray-900" scope="col">Undécimo<br><span class="text-xs font-normal">Hrs. sem.</span></th>
+                <th class="px-4 py-4 text-center text-sm font-bold text-gray-900" scope="col">Undécimo<br><span class="text-xs font-normal">Hrs. anuales</span></th>
+                <th class="px-4 py-4 text-center text-sm font-bold text-gray-900" scope="col">Duodécimo<br><span class="text-xs font-normal">Hrs. sem.</span></th>
+                <th class="px-4 py-4 text-center text-sm font-bold text-gray-900" scope="col">Duodécimo<br><span class="text-xs font-normal">Hrs. anuales</span></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <!-- Subárea 1: Modelado arquitectónico asistido por computadora -->
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-gray-800 font-medium">1. Modelado arquitectónico asistido por computadora</td>
+                <td class="px-4 py-4 text-center text-teal-700 font-semibold">12</td>
+                <td class="px-4 py-4 text-center text-teal-700 font-semibold">480</td>
+                <td class="px-4 py-4 text-center text-teal-700 font-semibold">12</td>
+                <td class="px-4 py-4 text-center text-teal-700 font-semibold">480</td>
+                <td class="px-4 py-4 text-center text-teal-700 font-semibold">12</td>
+                <td class="px-4 py-4 text-center text-teal-700 font-semibold">300</td>
+              </tr>
+
+              <!-- Subárea 2: Técnicas de presentación y modelos -->
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-gray-800 font-medium">2. Técnicas de presentación y modelos</td>
+                <td class="px-4 py-4 text-center text-blue-700 font-semibold">4</td>
+                <td class="px-4 py-4 text-center text-blue-700 font-semibold">160</td>
+                <td class="px-4 py-4 text-center text-gray-400">-</td>
+                <td class="px-4 py-4 text-center text-gray-400">-</td>
+                <td class="px-4 py-4 text-center text-blue-700 font-semibold">4</td>
+                <td class="px-4 py-4 text-center text-blue-700 font-semibold">100</td>
+              </tr>
+
+              <!-- Subárea 3: Dibujo y diseño arquitectónico y urbanístico -->
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-gray-800 font-medium">3. Dibujo y diseño arquitectónico y urbanístico</td>
+                <td class="px-4 py-4 text-center text-green-700 font-semibold">4</td>
+                <td class="px-4 py-4 text-center text-green-700 font-semibold">160</td>
+                <td class="px-4 py-4 text-center text-green-700 font-semibold">4</td>
+                <td class="px-4 py-4 text-center text-green-700 font-semibold">160</td>
+                <td class="px-4 py-4 text-center text-green-700 font-semibold">4</td>
+                <td class="px-4 py-4 text-center text-green-700 font-semibold">100</td>
+              </tr>
+
+              <!-- Subárea 4: Emprendimiento e innovación aplicada al Dibujo y modelado para edificaciones -->
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-gray-800 font-medium">4. Emprendimiento e innovación aplicada al Dibujo y modelado para edificaciones</td>
+                <td class="px-4 py-4 text-center text-gray-400">-</td>
+                <td class="px-4 py-4 text-center text-gray-400">-</td>
+                <td class="px-4 py-4 text-center text-orange-700 font-semibold">4</td>
+                <td class="px-4 py-4 text-center text-orange-700 font-semibold">160</td>
+                <td class="px-4 py-4 text-center text-gray-400">-</td>
+                <td class="px-4 py-4 text-center text-gray-400">-</td>
+              </tr>
+
+              <!-- Subárea 5: English Oriented to Drawing and Modeling of Buildings -->
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-gray-800 font-medium">5. English Oriented to Drawing and Modeling of Buildings</td>
+                <td class="px-4 py-4 text-center text-purple-700 font-semibold">4</td>
+                <td class="px-4 py-4 text-center text-purple-700 font-semibold">160</td>
+                <td class="px-4 py-4 text-center text-purple-700 font-semibold">4</td>
+                <td class="px-4 py-4 text-center text-purple-700 font-semibold">160</td>
+                <td class="px-4 py-4 text-center text-purple-700 font-semibold">4</td>
+                <td class="px-4 py-4 text-center text-purple-700 font-semibold">100</td>
+              </tr>
+
+              <!-- Totales -->
+              <tr class="bg-teal-100 font-bold border-t-2 border-teal-300">
+                <td class="px-6 py-4 text-teal-900 text-lg">Total</td>
+                <td class="px-4 py-4 text-center text-teal-900 text-lg">24</td>
+                <td class="px-4 py-4 text-center text-teal-900 text-lg">960</td>
+                <td class="px-4 py-4 text-center text-teal-900 text-lg">24</td>
+                <td class="px-4 py-4 text-center text-teal-900 text-lg">960</td>
+                <td class="px-4 py-4 text-center text-teal-900 text-lg">24</td>
+                <td class="px-4 py-4 text-center text-teal-900 text-lg">600</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Información adicional sobre el total de lecciones -->
+        <div class="bg-teal-50 px-6 py-4 border-t border-teal-200">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+            <div class="text-teal-800">
+              <span class="text-sm font-medium">Total del programa:</span>
+              <span class="text-lg font-bold ml-2">2,840 horas</span>
+            </div>
+            <div class="text-teal-600 text-sm mt-2 sm:mt-0">
+              *Según programa oficial MEP aprobado por el Consejo Superior de Educación
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Información de matrícula -->
+  <section class="py-16 md:py-20 bg-gradient-to-r from-teal-700 to-teal-800 text-white relative overflow-hidden" role="complementary">
+    <!-- Elementos decorativos -->
+    <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div class="absolute -top-16 -right-16 w-32 h-32 bg-white rounded-full opacity-10"></div>
+      <div class="absolute -bottom-16 -left-16 w-40 h-40 bg-white rounded-full opacity-10"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-5xl mx-auto">
+        <!-- Mensaje principal -->
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+          ¿Interesado en <span class="text-teal-200">Dibujo y Modelado para Edificaciones</span>?
+        </h2>
+        <p class="text-lg md:text-xl text-teal-100 mb-12 leading-relaxed">
+          Obtén más información sobre el proceso de matrícula, requisitos de ingreso 
+          y recursos disponibles para estudiantes de esta especialidad.
+        </p>
+
+        <!-- Información de matrícula estructurada -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <!-- Información de contacto -->
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30">
+            <div class="flex items-center justify-center w-16 h-16 bg-teal-600 rounded-full mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Información General y Matrícula</h3>
+            <div class="space-y-3 text-teal-100">
+              <p class="flex items-center">
+                <svg class="w-5 h-5 mr-3 text-teal-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                </svg>
+                2237-2710
+              </p>
+              <p class="flex items-center">
+                <svg class="w-5 h-5 mr-3 text-teal-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                </svg>
+                lic.ingcarlospascua@mep.go.cr
+              </p>
+              <p class="flex items-center">
+                <svg class="w-5 h-5 mr-3 text-teal-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                </svg>
+                San Rafael de Heredia
+              </p>
+            </div>
+          </div>
+
+          <!-- Recursos y orientación -->
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30">
+            <div class="flex items-center justify-center w-16 h-16 bg-teal-600 rounded-full mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Recursos Disponibles</h3>
+            <ul class="space-y-2 text-teal-100">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-teal-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Laboratorios de diseño CAD
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-teal-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Software especializado licenciado
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-teal-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Talleres de modelado físico
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-teal-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Docentes especialistas en arquitectura
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Enlaces de acción -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/especialidades" class="inline-flex items-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-teal-800 transition-all duration-300">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Ver todas las especialidades
+          </a>
+          <a href="/#beneficios" class="inline-flex items-center px-6 py-3 bg-white text-teal-800 font-semibold rounded-lg hover:bg-teal-50 transition-all duration-300 shadow-lg">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+            </svg>
+            Conocer beneficios del CTP
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</LayoutBase> 
