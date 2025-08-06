@@ -16,9 +16,9 @@ Este documento contiene el análisis completo del sitio web del CTP Carlos Pascu
 
 ### 🧭 **Navbar (src/layouts/LayoutBase.astro)**
 
-| Link | Estado | Descripción del Problema |
-|------|--------|--------------------------|
-| `#contacto` | ❌ **Roto** | No existe esta sección en ninguna página |
+| Link | Estado | Descripción |
+|------|--------|-------------|
+| `tel:22372710` | ✅ **Corregido** | Botón de contacto actualizado para llamada directa |
 
 ### 🦶 **Footer (src/layouts/LayoutBase.astro)**
 
