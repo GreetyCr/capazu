@@ -74,8 +74,8 @@ export const especialidades: Especialidad[] = [
     empleabilidad: "Certificación MEP",
     icono: "🏗️",
     colores: {
-      bg: "bg-red-50",
-      accent: "text-red-600"
+      bg: "bg-orange-50",
+      accent: "text-orange-600"
     }
   },
   {
