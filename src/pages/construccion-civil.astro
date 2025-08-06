@@ -122,12 +122,12 @@ const contenidosHerramientas = [
             <div class="text-gray-600 font-medium text-sm">Acreditación MEP</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl font-bold text-blue-600 mb-1">480</div>
-            <div class="text-gray-600 font-medium text-sm">Horas académicas</div>
+            <div class="text-3xl font-bold text-blue-600 mb-1">1,260</div>
+            <div class="text-gray-600 font-medium text-sm">Horas totales</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl font-bold text-purple-600 mb-1">1</div>
-            <div class="text-gray-600 font-medium text-sm">Año (décimo)</div>
+            <div class="text-3xl font-bold text-purple-600 mb-1">3</div>
+            <div class="text-gray-600 font-medium text-sm">Años de duración</div>
           </div>
         </div>
       </div>
@@ -203,15 +203,14 @@ const contenidosHerramientas = [
       <SectionTitle 
         title="Currículum académico"
         highlight="Currículum académico"
-        subtitle="Plan de estudios especializado para décimo año con enfoque en construcción civil y obras civiles."
+        subtitle="Plan de estudios detallado por nivel educativo con distribución de horas semanales y anuales."
       />
 
       <!-- Tabla responsive -->
       <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
         <!-- Header de la tabla -->
         <div class="bg-red-700 text-white px-6 py-4">
-          <h3 class="text-xl font-bold text-center">Plan de Estudios - Décimo Año</h3>
-          <p class="text-red-100 text-center text-sm mt-1">Especialidad: Construcción Civil</p>
+          <h3 class="text-xl font-bold text-center">Plan de Estudios por Nivel</h3>
         </div>
 
         <div class="overflow-x-auto">
@@ -219,106 +218,83 @@ const contenidosHerramientas = [
             <thead class="bg-gray-100">
               <tr>
                 <th class="px-6 py-4 text-left text-sm font-bold text-gray-900" scope="col">Subárea</th>
-                <th class="px-6 py-4 text-left text-sm font-bold text-gray-900" scope="col">Unidad de Estudio</th>
-                <th class="px-4 py-4 text-center text-sm font-bold text-gray-900" scope="col">Horas<br><span class="text-xs font-normal">por unidad</span></th>
-                <th class="px-4 py-4 text-center text-sm font-bold text-gray-900" scope="col">Total subárea<br><span class="text-xs font-normal">horas anuales</span></th>
+                <th class="px-4 py-4 text-center text-sm font-bold text-gray-900" scope="col">Décimo<br><span class="text-xs font-normal">Hrs. sem.</span></th>
+                <th class="px-4 py-4 text-center text-sm font-bold text-gray-900" scope="col">Décimo<br><span class="text-xs font-normal">Hrs. anuales</span></th>
+                <th class="px-4 py-4 text-center text-sm font-bold text-gray-900" scope="col">Undécimo<br><span class="text-xs font-normal">Hrs. sem.</span></th>
+                <th class="px-4 py-4 text-center text-sm font-bold text-gray-900" scope="col">Undécimo<br><span class="text-xs font-normal">Hrs. anuales</span></th>
+                <th class="px-4 py-4 text-center text-sm font-bold text-gray-900" scope="col">Duodécimo<br><span class="text-xs font-normal">Hrs. sem.</span></th>
+                <th class="px-4 py-4 text-center text-sm font-bold text-gray-900" scope="col">Duodécimo<br><span class="text-xs font-normal">Hrs. anuales</span></th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-200">
               <!-- Subárea 1: Construcción de obras civiles -->
               <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 text-gray-800 font-bold text-red-700 border-r border-gray-200" rowspan="3">
-                  Construcción de obras civiles
-                </td>
-                <td class="px-6 py-4 text-gray-800 font-medium">Materiales para la construcción</td>
-                <td class="px-4 py-4 text-center text-blue-700 font-semibold">72</td>
-                <td class="px-4 py-4 text-center text-red-700 font-bold text-lg" rowspan="3">480</td>
+                <td class="px-6 py-4 text-gray-800 font-medium">1. Construcción de obras civiles</td>
+                <td class="px-4 py-4 text-center text-red-700 font-semibold">12</td>
+                <td class="px-4 py-4 text-center text-red-700 font-semibold">480</td>
+                <td class="px-4 py-4 text-center text-red-700 font-semibold">12</td>
+                <td class="px-4 py-4 text-center text-red-700 font-semibold">480</td>
+                <td class="px-4 py-4 text-center text-red-700 font-semibold">12</td>
+                <td class="px-4 py-4 text-center text-red-700 font-semibold">300</td>
               </tr>
-              <tr class="hover:bg-gray-50 bg-gray-25">
-                <td class="px-6 py-4 text-gray-800 font-medium">Ensayos para el control de la calidad del concreto y sus agregados</td>
-                <td class="px-4 py-4 text-center text-green-700 font-semibold">36</td>
-              </tr>
+
+              <!-- Subárea 2: Presupuesto y herramientas informáticas -->
               <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4 text-gray-800 font-medium">Etapas de una construcción liviana</td>
-                <td class="px-4 py-4 text-center text-orange-700 font-semibold">144</td>
+                <td class="px-6 py-4 text-gray-800 font-medium">2. Presupuesto y herramientas informáticas de obras civiles</td>
+                <td class="px-4 py-4 text-center text-blue-700 font-semibold">6</td>
+                <td class="px-4 py-4 text-center text-blue-700 font-semibold">240</td>
+                <td class="px-4 py-4 text-center text-blue-700 font-semibold">6</td>
+                <td class="px-4 py-4 text-center text-blue-700 font-semibold">240</td>
+                <td class="px-4 py-4 text-center text-blue-700 font-semibold">6</td>
+                <td class="px-4 py-4 text-center text-blue-700 font-semibold">150</td>
               </tr>
 
-              <!-- Separador visual -->
-              <tr class="bg-red-50">
-                <td colspan="4" class="px-6 py-2"></td>
+              <!-- Subárea 3: Dibujo técnico -->
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-gray-800 font-medium">3. Dibujo técnico</td>
+                <td class="px-4 py-4 text-center text-green-700 font-semibold">4</td>
+                <td class="px-4 py-4 text-center text-green-700 font-semibold">160</td>
+                <td class="px-4 py-4 text-center text-green-700 font-semibold">4</td>
+                <td class="px-4 py-4 text-center text-green-700 font-semibold">160</td>
+                <td class="px-4 py-4 text-center text-green-700 font-semibold">4</td>
+                <td class="px-4 py-4 text-center text-green-700 font-semibold">100</td>
               </tr>
 
-              <!-- Resultados de aprendizaje -->
-              <tr class="bg-red-100">
-                <td class="px-6 py-4 text-red-800 font-bold" colspan="4">
-                  <h4 class="text-lg mb-3">🎯 Resultados de Aprendizaje Esperados:</h4>
-                  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 text-sm">
-                    <div class="space-y-2">
-                      <p class="flex items-start">
-                        <span class="text-red-600 mr-2 mt-1">•</span>
-                        <span>Definir los diferentes tipos de materiales empleados en la construcción civil y sus características principales.</span>
-                      </p>
-                      <p class="flex items-start">
-                        <span class="text-red-600 mr-2 mt-1">•</span>
-                        <span>Explicar el proceso de fabricación del cemento y de los bloques de concreto.</span>
-                      </p>
-                      <p class="flex items-start">
-                        <span class="text-red-600 mr-2 mt-1">•</span>
-                        <span>Interpretar el funcionamiento de un quebrador y de un aserradero, aplicando las medidas de seguridad adecuadas.</span>
-                      </p>
-                      <p class="flex items-start">
-                        <span class="text-red-600 mr-2 mt-1">•</span>
-                        <span>Describir pruebas de resistencia, de granulometría, de revenimiento, cantidad de material, deterioro en un agregado y otras, que aseguren la calidad de los proyectos de construcción.</span>
-                      </p>
-                    </div>
-                    <div class="space-y-2">
-                      <p class="flex items-start">
-                        <span class="text-red-600 mr-2 mt-1">•</span>
-                        <span>Interpretar el funcionamiento de un laboratorio de materiales que controla la calidad a nivel nacional.</span>
-                      </p>
-                      <p class="flex items-start">
-                        <span class="text-red-600 mr-2 mt-1">•</span>
-                        <span>Ubicar un trazado con el replanteamiento de los ejes de pared para una construcción de interés social.</span>
-                      </p>
-                      <p class="flex items-start">
-                        <span class="text-red-600 mr-2 mt-1">•</span>
-                        <span>Interpretar el concreto hidráulico para las estructuras de una vivienda.</span>
-                      </p>
-                      <p class="flex items-start">
-                        <span class="text-red-600 mr-2 mt-1">•</span>
-                        <span>Determinar las etapas de construcción en una casa de habitación por medio del sistema de construcción tradicional.</span>
-                      </p>
-                      <p class="flex items-start">
-                        <span class="text-red-600 mr-2 mt-1">•</span>
-                        <span>Interpretar las etapas de construcción de una casa de habitación, en los sistemas no tradicionales existentes.</span>
-                      </p>
-                    </div>
-                  </div>
-                </td>
+              <!-- Subárea 4: English for communication -->
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4 text-gray-800 font-medium">4. English for communication</td>
+                <td class="px-4 py-4 text-center text-purple-700 font-semibold">2</td>
+                <td class="px-4 py-4 text-center text-purple-700 font-semibold">80</td>
+                <td class="px-4 py-4 text-center text-purple-700 font-semibold">2</td>
+                <td class="px-4 py-4 text-center text-purple-700 font-semibold">80</td>
+                <td class="px-4 py-4 text-center text-purple-700 font-semibold">2</td>
+                <td class="px-4 py-4 text-center text-purple-700 font-semibold">50</td>
               </tr>
 
-              <!-- Total general -->
-              <tr class="bg-red-700 text-white font-bold border-t-2 border-red-800">
-                <td class="px-6 py-4 text-lg" colspan="3">Total de la especialidad</td>
-                <td class="px-4 py-4 text-center text-lg">480 horas</td>
+              <!-- Totales -->
+              <tr class="bg-red-100 font-bold border-t-2 border-red-300">
+                <td class="px-6 py-4 text-red-900 text-lg">Total</td>
+                <td class="px-4 py-4 text-center text-red-900 text-lg">24</td>
+                <td class="px-4 py-4 text-center text-red-900 text-lg">480</td>
+                <td class="px-4 py-4 text-center text-red-900 text-lg">24</td>
+                <td class="px-4 py-4 text-center text-red-900 text-lg">480</td>
+                <td class="px-4 py-4 text-center text-red-900 text-lg">24</td>
+                <td class="px-4 py-4 text-center text-red-900 text-lg">300</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <!-- Información adicional -->
+        <!-- Información adicional sobre el total de horas -->
         <div class="bg-red-50 px-6 py-4 border-t border-red-200">
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
             <div class="text-red-800">
-              <span class="text-sm font-medium">Programa de décimo año:</span>
-              <span class="text-lg font-bold ml-2">480 horas académicas</span>
+              <span class="text-sm font-medium">Total del programa:</span>
+              <span class="text-lg font-bold ml-2">1,260 horas</span>
             </div>
             <div class="text-red-600 text-sm mt-2 sm:mt-0">
-              *Programa oficial MEP para décimo año - Especialidad técnica en Construcción Civil
+              *Según programa oficial MEP aprobado por el Consejo Superior de Educación
             </div>
-          </div>
-          <div class="mt-3 text-red-700 text-sm">
-            <strong>Nota:</strong> Esta especialidad se imparte únicamente en décimo año como formación técnica especializada en construcción civil y obras civiles.
           </div>
         </div>
       </div>
